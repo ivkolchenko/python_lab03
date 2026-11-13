@@ -1,6 +1,8 @@
 import pytest
 
-from src.object_catalog import *
+from src.object_catalog import (Auditorium, Catalog, catalog_save, catalog_load,
+                                CorruptedFileError, UnsupportedVersionError)
+
 
 def test_round_trip_json(tmp_path):
     """Тест полного цикла JSON: загрузка каталога, его выгрузка и сравнение эквивалентности"""

@@ -1,7 +1,8 @@
-from src.object_catalog.models import Catalog, Auditorium
-from src.object_catalog.errors import *
-
 import json
+
+from src.object_catalog.errors import CatalogError, CorruptedFileError, UnsupportedVersionError
+from src.object_catalog.models import Auditorium, Catalog
+
 
 def catalog_save(catalog: Catalog, path: str) -> None:
     """Сохранение каталога в json"""

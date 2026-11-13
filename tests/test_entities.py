@@ -1,6 +1,6 @@
 import pytest
 
-from src.object_catalog import *
+from src.object_catalog import Auditorium, InvalidEntityError
 
 
 def test_creating_valid_entity():

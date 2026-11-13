@@ -1,6 +1,7 @@
 import pytest
 
-from src.object_catalog import *
+from src.object_catalog import Catalog, Auditorium, ObjectNotFoundError, IdDuplicateError
+
 
 def test_catalog_methods():
     """Тест методов Catalog get() и add()"""

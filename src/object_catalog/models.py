@@ -1,7 +1,11 @@
-from datetime import date
-from typing import Literal, Iterator
-from pydantic import dataclasses, fields, model_validator, ValidationError
-from src.object_catalog.errors import *
+from collections.abc import Iterator
+from typing import Literal
+
+from pydantic import ValidationError, dataclasses, fields, model_validator
+
+from src.object_catalog.errors import (InvalidEntityError, IdDuplicateError,
+                                       ObjectNotFoundError)
+
 
 @dataclasses.dataclass(kw_only=True)
 class Auditorium:
